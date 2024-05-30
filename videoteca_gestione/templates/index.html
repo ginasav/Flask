@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Benvenuto nella tua videoteca online!</h1>
+
+    <h2>Aggiungi un nuovo film</h2>
+    <form action="/aggiungi_film" method="POST">
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo" required><br>
+        <label for="regista">Regista:</label>
+        <input type="text" id="regista" name="regista" required><br>
+        <label for="anno_uscita">Anno di uscita:</label>
+        <input type="number" id="anno_uscita" name="anno_uscita" required><br>
+        <input type="submit" value="Aggiungi film">
+    </form>
+
+    <h2>Cerca un film</h2>
+    <form action="/cerca_film" method="GET">
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo"><br>
+        <label for="regista">Regista:</label>
+        <input type="text" id="regista" name="regista"><br>
+        <input type="submit" value="Cerca film">
+    </form>
+
+    <h2>Rimuovi un film</h2>
+    <form action="/rimuovi_film" method="POST">
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo"><br>
+        <input type="submit" value="Rimuovi film">
+    </form>
+
+    <h2>Noleggia un film dal catalogo</h2>
+    <form action="/noleggia_film" method="POST">
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo"><br>
+        <input type="submit" value="Noleggia film">
+    </form>
+
+    <h2>Restituisci un film noleggiato</h2>
+    <form action="/restituisci_film" method="POST">
+        <label for="titolo">Titolo:</label>
+        <input type="text" id="titolo" name="titolo"><br>
+        <input type="submit" value="Restituisci film">
+    </form>
+
+    <a href="/catalogo_film">Vai al catalogo dei film</a>
+</body>
+</html>

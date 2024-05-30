@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risultati della Ricerca</title>
+</head>
+<body>
+    <h1>Risultati della ricerca:</h1>
+    <ul>
+        {% if film_trovati %}
+            {% for film in film_trovati %}
+                <li>{{ film }}</li>
+            {% endfor %}
+        {% else %}
+            <li>Nessun film trovato.</li>
+        {% endif %}
+    </ul>
+    <a href="/">Torna alla homepage</a>
+</body>
+</html>
